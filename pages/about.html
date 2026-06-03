@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>About – Swati Parihar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../css/global.css"/>
+<style>
+/* ABOUT PAGE */
+.about-hero {
+  padding: 7rem 0 5rem;
+  position: relative; overflow: hidden;
+}
+.about-glow {
+  position: absolute; top: -150px; right: -100px;
+  width: 500px; height: 500px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,212,255,.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+.page-badge {
+  display: inline-flex; align-items: center; gap: .5rem;
+  padding: .3rem 1rem;
+  border: 1px solid rgba(0,212,255,.25); border-radius: 999px;
+  background: rgba(0,212,255,.06);
+  font-family: var(--font-mono); font-size: .7rem; letter-spacing: .15em;
+  color: var(--accent); text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  animation: fadeUp .6s ease both;
+}
+.about-title {
+  font-family: var(--font-head);
+  font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 700;
+  line-height: 1.05; letter-spacing: -.03em; color: var(--text);
+  margin-bottom: 1.5rem;
+  animation: fadeUp .6s .1s ease both;
+}
+.about-title span { color: var(--accent); }
+
+/* ABOUT GRID */
+.about-grid {
+  display: grid; grid-template-columns: 1fr 1.7fr;
+  gap: 5rem; align-items: start; margin-top: 4rem;
+}
+
+/* AVATAR CARD */
+.avatar-card {
+  position: sticky; top: 110px;
+  border: 1px solid var(--border2); border-radius: var(--radius-lg);
+  background: var(--surface); backdrop-filter: blur(16px);
+  overflow: hidden;
+  animation: fadeUp .6s .2s ease both;
+}
+.avatar-header {
+  height: 180px;
+  background: linear-gradient(135deg, rgba(0,212,255,.15), rgba(124,58,237,.15));
+  display: flex; align-items: center; justify-content: center; position: relative;
+}
+.avatar-circle {
+  width: 90px; height: 90px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-head); font-size: 2.2rem; font-weight: 700; color: var(--bg);
+  box-shadow: 0 0 40px var(--glow);
+}
+.avatar-ring {
+  position: absolute; inset: 20px; border: 1px solid rgba(0,212,255,.2);
+  border-radius: 50%; animation: spin 8s linear infinite;
+}
+.avatar-body { padding: 1.5rem; }
+.avatar-name {
+  font-family: var(--font-head); font-size: 1.2rem; font-weight: 700;
+  color: var(--text); margin-bottom: .2rem;
+}
+.avatar-title { font-size: .8rem; color: var(--accent); font-family: var(--font-mono); margin-bottom: 1.5rem; }
+
+.info-row {
+  display: flex; gap: .75rem; align-items: flex-start;
+  padding: .6rem 0; border-bottom: 1px solid var(--border); font-size: .83rem;
+}
+.info-row:last-child { border-bottom: none; }
+.info-label { color: var(--text2); min-width: 90px; font-family: var(--font-mono); font-size: .72rem; letter-spacing: .05em; }
+.info-value { color: var(--text); font-weight: 500; }
+.info-value a { color: var(--accent); text-decoration: none; }
+.info-value a:hover { text-decoration: underline; }
+
+.status-dot {
+  display: inline-block; width: 8px; height: 8px; border-radius: 50%;
+  background: var(--accent3); margin-right: 6px;
+  animation: pulse 2s ease infinite;
+}
+@keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(.8)} }
+
+/* ABOUT TEXT */
+.about-text { animation: fadeUp .6s .3s ease both; }
+.about-block { margin-bottom: 3rem; }
+.about-block h3 {
+  font-family: var(--font-head); font-size: 1.2rem; font-weight: 700;
+  color: var(--text); margin-bottom: 1rem; display: flex; align-items: center; gap: .6rem;
+}
+.about-block h3::before {
+  content: ''; display: block; width: 3px; height: 20px;
+  background: var(--accent); border-radius: 2px;
+}
+.about-block p {
+  color: var(--text2); font-size: .95rem; line-height: 1.85; margin-bottom: .85rem;
+}
+.about-block p strong { color: var(--text); font-weight: 600; }
+
+/* HIGHLIGHT BOXES */
+.highlight-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem;
+}
+.highlight-box {
+  padding: 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface); backdrop-filter: blur(12px);
+  transition: var(--transition);
+}
+.highlight-box:hover { border-color: rgba(0,212,255,.3); transform: translateY(-3px); }
+.hl-icon { font-size: 1.5rem; margin-bottom: .5rem; }
+.hl-title { font-family: var(--font-head); font-size: .9rem; font-weight: 600; color: var(--text); margin-bottom: .2rem; }
+.hl-sub { font-size: .78rem; color: var(--text2); }
+
+/* EDUCATION */
+.edu-card {
+  padding: 1.5rem;
+  border: 1px solid var(--border2);
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, rgba(0,212,255,.04), rgba(124,58,237,.04));
+  display: flex; gap: 1.5rem; align-items: flex-start;
+  transition: var(--transition);
+}
+.edu-card:hover { border-color: rgba(0,212,255,.3); }
+.edu-icon {
+  width: 48px; height: 48px; border-radius: 10px; flex-shrink: 0;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  display: flex; align-items: center; justify-content: center; font-size: 1.4rem;
+}
+.edu-degree {
+  font-family: var(--font-head); font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: .2rem;
+}
+.edu-school { font-size: .85rem; color: var(--text2); margin-bottom: .2rem; }
+.edu-year {
+  font-family: var(--font-mono); font-size: .72rem; letter-spacing: .08em;
+  color: var(--accent); text-transform: uppercase;
+}
+
+/* GOAL PILLS */
+.goal-pills { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1rem; }
+.goal-pill {
+  padding: .3rem .85rem; border-radius: 999px;
+  border: 1px solid var(--border2);
+  background: var(--surface);
+  font-size: .78rem; color: var(--text2); letter-spacing: .03em;
+  transition: var(--transition);
+}
+.goal-pill:hover { border-color: var(--accent); color: var(--accent); }
+
+@media (max-width: 768px) {
+  .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .avatar-card { position: static; }
+  .highlight-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 480px) {
+  .highlight-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<div id="loader">
+  <div class="loader-ring"><div class="loader-ring-inner"></div></div>
+  <div class="loader-text">LOADING<span class="dots">...</span></div>
+</div>
+
+<nav id="navbar">
+  <a href="../index.html" class="nav-logo">SP<span class="nav-logo-dot">.</span></a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="about.html" class="active">About</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta">Hire Me</a>
+  <button class="nav-hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html" onclick="toggleMenu()">Home</a>
+  <a href="about.html" onclick="toggleMenu()">About</a>
+  <a href="skills.html" onclick="toggleMenu()">Skills</a>
+  <a href="projects.html" onclick="toggleMenu()">Projects</a>
+  <a href="experience.html" onclick="toggleMenu()">Experience</a>
+  <a href="contact.html" onclick="toggleMenu()">Contact</a>
+</div>
+
+<div class="page-wrapper">
+  <section class="about-hero">
+    <div class="about-glow"></div>
+    <div class="container">
+      <div class="page-badge">✦ About Me</div>
+      <h1 class="about-title">Building the Cloud,<br/><span>One Deploy at a Time</span></h1>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="about-grid">
+
+        <!-- LEFT: AVATAR CARD -->
+        <div class="avatar-card reveal">
+          <div class="avatar-header">
+            <div class="avatar-ring"></div>
+            <div class="avatar-circle">SP</div>
+          </div>
+          <div class="avatar-body">
+            <div class="avatar-name">Swati Parihar</div>
+            <div class="avatar-title">Cloud Engineer · DevOps · AWS</div>
+            <div class="info-row">
+              <span class="info-label">STATUS</span>
+              <span class="info-value"><span class="status-dot"></span>Open to Work</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">LOCATION</span>
+              <span class="info-value">Alwar, Rajasthan, India</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">EDUCATION</span>
+              <span class="info-value">B.Sc. CS · 2023–2027</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">FOCUS</span>
+              <span class="info-value">Cloud · DevOps · MERN</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">EMAIL</span>
+              <span class="info-value"><a href="mailto:swatiparihar577@gmail.com">swatiparihar577@gmail.com</a></span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">GITHUB</span>
+              <span class="info-value"><a href="https://github.com/swatiparihar18" target="_blank">swatiparihar18</a></span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">LINKEDIN</span>
+              <span class="info-value"><a href="https://www.linkedin.com/in/swati-parihar-66bba6321" target="_blank">swati-parihar</a></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: TEXT -->
+        <div class="about-text">
+
+          <div class="about-block reveal">
+            <h3>Who I Am</h3>
+            <p>I'm <strong>Swati Parihar</strong>, a Computer Science undergraduate from <strong>Modern Institute of Technology and Research Centre</strong> in Rajasthan, India (2023–2027).</p>
+            <p>I discovered cloud computing early in my studies and fell in love with the idea of infrastructure as code — the power to provision, deploy, and scale entire systems through a terminal window. That curiosity quickly grew into hands-on expertise.</p>
+            <p>Today I work with <strong>AWS, Docker, Kubernetes, and CI/CD pipelines</strong>, and I'm passionate about building resilient, automated cloud infrastructure that works at scale.</p>
+          </div>
+
+          <div class="about-block reveal" style="transition-delay:.1s">
+            <h3>What I Do</h3>
+            <div class="highlight-grid">
+              <div class="highlight-box">
+                <div class="hl-icon">☁️</div>
+                <div class="hl-title">Cloud Infrastructure</div>
+                <div class="hl-sub">AWS EC2, S3, RDS, IAM, EKS, Lambda, CloudWatch, CloudFront</div>
+              </div>
+              <div class="highlight-box">
+                <div class="hl-icon">🔄</div>
+                <div class="hl-title">DevOps & CI/CD</div>
+                <div class="hl-sub">Docker, Kubernetes, GitHub Actions, Nginx, automated pipelines</div>
+              </div>
+              <div class="highlight-box">
+                <div class="hl-icon">🛠️</div>
+                <div class="hl-title">Backend Development</div>
+                <div class="hl-sub">Node.js, Express.js, RESTful APIs, MongoDB, Java/JSP</div>
+              </div>
+              <div class="highlight-box">
+                <div class="hl-icon">⚛️</div>
+                <div class="hl-title">Frontend</div>
+                <div class="hl-sub">React.js, JavaScript, HTML5/CSS3, responsive UI design</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-block reveal" style="transition-delay:.15s">
+            <h3>Education</h3>
+            <div class="edu-card">
+              <div class="edu-icon">🎓</div>
+              <div>
+                <div class="edu-degree">Bachelor of Science in Computer Science</div>
+                <div class="edu-school">Modern Institute of Technology and Research Centre</div>
+                <div class="edu-year">2023 – 2027 · Rajasthan, India</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-block reveal" style="transition-delay:.2s">
+            <h3>What I'm Looking For</h3>
+            <p>I'm actively seeking <strong>Cloud Engineering</strong>, <strong>DevOps</strong>, or <strong>AWS internship</strong> opportunities where I can contribute to real infrastructure challenges and grow alongside an experienced team.</p>
+            <div class="goal-pills">
+              <span class="goal-pill">☁️ Cloud Engineering Intern</span>
+              <span class="goal-pill">🔧 DevOps Intern</span>
+              <span class="goal-pill">🚀 AWS Specialist Role</span>
+              <span class="goal-pill">🤝 Remote or Rajasthan-based</span>
+              <span class="goal-pill">📦 Backend / Infrastructure</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <span class="footer-logo">SP<span>.</span></span>
+    <p class="footer-copy">© 2024 Swati Parihar · Cloud & DevOps Engineer</p>
+    <div class="footer-socials">
+      <a href="https://github.com/swatiparihar18" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/swati-parihar-66bba6321" target="_blank">LinkedIn</a>
+      <a href="mailto:swatiparihar577@gmail.com">Email</a>
+    </div>
+  </div>
+</footer>
+<script src="../js/global.js"></script>
+</body>
+</html>
