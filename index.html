@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Swati Parihar – DevOps & Cloud Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Clash+Display:wght@400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/global.css"/>
+<link rel="stylesheet" href="css/hero.css"/>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">Swati Parihar<span class="nav-logo-dot">.</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="pages/about.html">About</a></li>
+    <li><a href="pages/skills.html">Skills</a></li>
+    <li><a href="pages/projects.html">Projects</a></li>
+    <li><a href="pages/experience.html">Certification & Training</a></li>
+    <li><a href="pages/contact.html">Contact</a></li>
+  </ul>
+  <a href="pages/contact.html" class="nav-cta">Hire Me</a>
+  <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" onclick="toggleMenu()">Home</a>
+  <a href="pages/about.html" onclick="toggleMenu()">About</a>
+  <a href="pages/skills.html" onclick="toggleMenu()">Skills</a>
+  <a href="pages/projects.html" onclick="toggleMenu()">Projects</a>
+  <a href="pages/experience.html" onclick="toggleMenu()">Certification & Training</a>
+  <a href="pages/contact.html" onclick="toggleMenu()">Contact</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+
+<canvas id="matrix-canvas"></canvas>
+
+<div class="hero-glow-1"></div>
+
+<div class="hero-glow-2"></div>
+
+
+<div class="hero-wrapper">
+
+    <!-- LEFT SIDE -->
+
+    <div class="hero-content">
+
+        <h1 class="hero-name">
+
+            Hi, I'm <br>
+
+            SWATI <span class="accent-line">PARIHAR</span>
+
+        </h1>
+
+        <div class="hero-roles">
+
+            <span class="role-item">Cloud Engineer</span>
+
+            <span class="role-sep">·</span>
+
+            <span class="role-item">DevOps Intern</span>
+
+            <span class="role-sep">·</span>
+
+            <span class="role-item">AWS Specialist</span>
+
+        </div>
+
+        <p class="hero-bio">
+
+            Computer Science undergraduate passionate about
+            cloud technologies, DevOps and scalable systems.
+
+            <br><br>
+
+            Building projects using AWS, Docker,
+            Linux, CI/CD and deployment workflows.
+
+            <span class="bio-highlight">
+
+                Open to Cloud / DevOps internships
+
+            </span>
+
+        </p>
+
+        <div class="hero-btns">
+
+            <a href="#" class="btn-primary">
+
+                View Projects →
+
+            </a>
+
+            <a href="#" class="btn-outline">
+
+                Get In Touch
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- RIGHT SIDE IMAGE -->
+
+    <div class="hero-image">
+
+        <img
+        src="images/profile.jpg"
+        class="profile-img"
+        alt="profile">
+
+    </div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- QUICK PREVIEW SECTION -->
+<section class="quick-nav-section">
+  <div class="container">
+    <div class="qn-grid">
+      <a href="pages/about.html" class="qn-card">
+        <div class="qn-icon">👩‍💻</div>
+        <div class="qn-title">About Me</div>
+        <div class="qn-sub">CS undergrad from Rajasthan</div>
+      </a>
+      <a href="pages/skills.html" class="qn-card">
+        <div class="qn-icon">⚡</div>
+        <div class="qn-title">Skills</div>
+        <div class="qn-sub">AWS, Docker, Kubernetes & more</div>
+      </a>
+      <a href="pages/projects.html" class="qn-card">
+        <div class="qn-icon">🚀</div>
+        <div class="qn-title">Projects</div>
+        <div class="qn-sub">CloudCart, AI Evidence Platform</div>
+      </a>
+      <a href="pages/experience.html" class="qn-card">
+        <div class="qn-icon">🎓</div>
+        <div class="qn-title">Experience</div>
+        <div class="qn-sub">Training & certifications</div>
+      </a>
+      <a href="pages/contact.html" class="qn-card">
+        <div class="qn-icon">✉️</div>
+        <div class="qn-title">Contact</div>
+        <div class="qn-sub">Let's build together</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <p class="footer-copy">© Swati Parihar · DevOps & Cloud Engineer</p>
+    <div class="footer-socials">
+      <a href="https://github.com/swatiparihar18" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/swati-parihar-66bba6321" target="_blank">LinkedIn</a>
+      <a href="mailto:swatiparihar577@gmail.com">Email</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/global.js"></script>
+<script src="js/hero.js"></script>
+</body>
+</html>
