@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'agent-1' }
+    agent { label 'Agent' }
 
     environment {
         DEPLOY_DIR = '/var/www/html'
