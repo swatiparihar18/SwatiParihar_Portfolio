@@ -1,6 +1,43 @@
 # SwatiParihar_Portfolio
-Personal portfolio showcasing projects, technical skills, and my journey in software development, cloud, and DevOps.
 
+A modern personal portfolio website showcasing my journey as a Software and DevOps Engineer, including projects, technical skills, certifications, and cloud deployment experience.
 
-view at == 
-https://swatiparihar18.github.io/SwatiParihar_Portfolio/
+🌐 Live Portfolio:
+https://wonderful-moonbeam-fa7ff8.netlify.app/
+
+## Highlights
+
+- Responsive and modern UI
+- Project showcase section
+- Technical skills overview
+- Certifications and achievements
+- Contact and professional profiles
+- Fast deployment using Netlify
+
+## Tech Stack
+
+- HTML5
+- CSS3
+- JavaScript
+- Bootstrap
+
+## Deployment
+
+Hosted on Netlify with continuous deployment from GitHub.
+
+## Purpose
+
+This portfolio serves as a central hub to showcase my work in:
+
+- Software Development
+- Cloud Computing
+- DevOps Engineering
+- AWS Projects
+- Open Source Contributions
+
+## Author
+
+Swati Parihar
+
+Portfolio:
+https://wonderful-moonbeam-fa7ff8.netlify.app/
