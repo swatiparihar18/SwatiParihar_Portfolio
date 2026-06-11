@@ -188,36 +188,22 @@
       <div class="page-badge">🚀 Projects</div>
       <h1 class="page-title">Things I've <span>Built</span></h1>
       <p class="page-sub">Production-grade projects with real deployment workflows — from cloud infra to full-stack apps.</p>
-      
 
-      <!-- PROJECTS GRID -->
-      <div class="pc-title">2-Tier Flask Application</div>
-
-<div class="pc-desc">
-  Developed and deployed a containerized 2-Tier web application using Flask and MySQL.
-  Containerized services using Docker and Docker Compose and deployed the application
-  on AWS EC2 running Ubuntu Linux.
-</div>
-
-<div class="pc-details">
-  <div class="pc-detail-item">Built Flask application with MySQL backend</div>
-  <div class="pc-detail-item">Docker & Docker Compose containerization</div>
-  <div class="pc-detail-item">AWS EC2 deployment on Ubuntu Linux</div>
-  <div class="pc-detail-item">Container networking and database integration</div>
-  <div class="pc-detail-item">Git & GitHub version control</div>
-</div>
-      <!-- Evi - Auth -->
-          <div class="pc-body">
-            <div class="pc-title">Evi-Auth</div>
-            <div class="pc-title">Built an AI-powered Digital Evidence Authentication platform to detect manipulated media (deepfake images/videos) and ensure secure evidence verification.</div>
-            <div class="pc-desc">My Role:
-- Integrated AI model pipeline into web system
-- Built Dockerized microservices for scalable deployment
-- Helped set up CI/CD pipeline for automated deployment
-<br>
-Impact:
-- Improved evidence validation workflow efficiency
-- Enabled secure and tamper-proof media verification system</div>
+      <!-- FEATURED PROJECT: Evi-Auth -->
+      <div class="featured-project reveal">
+        <div class="fp-inner">
+          <div class="fp-visual">
+            <div class="fp-visual-grid"></div>
+            <div class="fp-visual-icon">🔐</div>
+          </div>
+          <div class="fp-content">
+            <span class="fp-badge">Featured Project</span>
+            <div class="fp-title">Evi-Auth</div>
+            <p class="fp-desc">
+              Built an AI-powered Digital Evidence Authentication platform to detect manipulated media (deepfake images/videos) and ensure secure evidence verification.<br><br>
+              <strong style="color:var(--text)">My Role:</strong> Integrated AI model pipeline into web system, built Dockerized microservices for scalable deployment, and helped set up CI/CD pipeline for automated deployment.<br><br>
+              <strong style="color:var(--text)">Impact:</strong> Improved evidence validation workflow efficiency and enabled secure, tamper-proof media verification.
+            </p>
             <div class="fp-tags">
               <span class="tag">Node.js</span>
               <span class="tag">Docker</span>
@@ -233,6 +219,37 @@ Impact:
         </div>
       </div>
 
+      <!-- PROJECTS GRID -->
+      <div class="projects-grid">
+
+        <!-- 2-Tier Flask Application -->
+        <div class="project-card reveal" style="transition-delay:.0s">
+          <div class="pc-header">
+            <div class="pc-header-bg" style="background:linear-gradient(135deg,#0a1f30,#05111a)"></div>
+            <div class="pc-grid-overlay"></div>
+            <div class="pc-icon">🐳</div>
+            <div class="pc-status status-done">Deployed</div>
+          </div>
+          <div class="pc-body">
+            <div class="pc-title">2-Tier Flask Application</div>
+            <div class="pc-desc">Developed and deployed a containerized 2-Tier web application using Flask and MySQL on AWS EC2.</div>
+            <div class="pc-details">
+              <div class="pc-detail-item">Flask application with MySQL backend</div>
+              <div class="pc-detail-item">Docker &amp; Docker Compose containerization</div>
+              <div class="pc-detail-item">AWS EC2 deployment on Ubuntu Linux</div>
+              <div class="pc-detail-item">Container networking and database integration</div>
+              <div class="pc-detail-item">Git &amp; GitHub version control</div>
+            </div>
+            <div class="pc-tags">
+              <span class="tag">Flask</span><span class="tag">MySQL</span><span class="tag">Docker</span><span class="tag">AWS EC2</span><span class="tag">Linux</span>
+            </div>
+            <div class="pc-links">
+              <a href="https://github.com/swatiparihar18" target="_blank" class="proj-btn proj-gh">GitHub ↗</a>
+              <span class="proj-na">Infrastructure</span>
+            </div>
+          </div>
+        </div>
+
         <!-- CloudCart -->
         <div class="project-card reveal" style="transition-delay:.05s">
           <div class="pc-header">
@@ -243,16 +260,11 @@ Impact:
           </div>
           <div class="pc-body">
             <div class="pc-title">CloudCart</div>
-            <div class="pc-desc">Built a full-stack e-commerce platform with user authentication, product listing, and cart management, deployed on AWS using Docker and Nginx</div>
+            <div class="pc-desc">Built a full-stack e-commerce platform with user authentication, product listing, and cart management, deployed on AWS using Docker and Nginx.</div>
             <div class="pc-details">
-              <div class="pc-detail-item">My Role:
-- Containerized frontend and backend using Docker Compose
-- Deployed application on AWS EC2 with Nginx reverse proxy
-- Implemented CI/CD pipeline using GitHub Actions</div>
-
-              <div class="pc-detail-item">Docker & Docker Compose containerization</div>
+              <div class="pc-detail-item">Containerized frontend and backend using Docker Compose</div>
+              <div class="pc-detail-item">Deployed on AWS EC2 with Nginx reverse proxy</div>
               <div class="pc-detail-item">CI/CD pipeline via GitHub Actions</div>
-              <div class="pc-detail-item">Nginx reverse proxy on EC2</div>
               <div class="pc-detail-item">Secure environment variable management</div>
             </div>
             <div class="pc-tags">
@@ -278,7 +290,7 @@ Impact:
             <div class="pc-desc">Provisioned Ubuntu Linux EC2 instance with full deployment lifecycle management, IAM roles, security groups, and CloudWatch monitoring.</div>
             <div class="pc-details">
               <div class="pc-detail-item">Full EC2 provisioning from AMI to launch</div>
-              <div class="pc-detail-item">IAM roles & least-privilege security groups</div>
+              <div class="pc-detail-item">IAM roles &amp; least-privilege security groups</div>
               <div class="pc-detail-item">Apache/Nginx config via Bash scripts</div>
               <div class="pc-detail-item">CloudWatch CPU/memory alert setup</div>
             </div>
@@ -291,7 +303,6 @@ Impact:
             </div>
           </div>
         </div>
-
 
         <!-- TaskFlow CI/CD -->
         <div class="project-card reveal" style="transition-delay:.2s">
@@ -306,21 +317,21 @@ Impact:
             <div class="pc-desc">Complete CI/CD workflow using GitHub Actions and Docker. Automated build, test, and deployment with version control best practices.</div>
             <div class="pc-details">
               <div class="pc-detail-item">GitHub Actions YAML pipeline</div>
-              <div class="pc-detail-item">Docker build & push automation</div>
+              <div class="pc-detail-item">Docker build &amp; push automation</div>
               <div class="pc-detail-item">Environment-based deployment stages</div>
-              <div class="pc-detail-item">Branch protection & PR workflows</div>
+              <div class="pc-detail-item">Branch protection &amp; PR workflows</div>
             </div>
             <div class="pc-tags">
               <span class="tag">Docker</span><span class="tag">GitHub Actions</span><span class="tag">CI/CD</span><span class="tag">DevOps</span><span class="tag">YAML</span>
             </div>
             <div class="pc-links">
               <a href="https://github.com/swatiparihar18/taskflow-ci-cd.git" target="_blank" class="proj-btn proj-gh">GitHub ↗</a>
-              <a href="http://13.61.58.168:5002/" target="_blank" class="proj-btn proj-live">Live Demo ↗</a>  
+              <a href="http://13.61.58.168:5002/" target="_blank" class="proj-btn proj-live">Live Demo ↗</a>
             </div>
           </div>
         </div>
 
-      </div>
+      </div><!-- end .projects-grid -->
     </div>
   </section>
 </div>
@@ -328,7 +339,7 @@ Impact:
 <footer>
   <div class="footer-inner">
     <span class="footer-logo">Swati Parihar</span>
-    <p class="footer-copy">Swati Parihar · Cloud & DevOps Engineer</p>
+    <p class="footer-copy">Swati Parihar · Cloud &amp; DevOps Engineer</p>
     <div class="footer-socials">
       <a href="https://github.com/swatiparihar18" target="_blank">GitHub</a>
       <a href="https://www.linkedin.com/in/swati-parihar-66bba6321" target="_blank">LinkedIn</a>
